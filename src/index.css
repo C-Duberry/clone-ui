@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
+  margin: auto;
+  min-width: 340px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +15,935 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  background-color: #f2f2f2;
+}
+
+/*Width of 100%, off-white background. */
+
+main {
+  width: 100%;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  display: block;
+}
+
+/*Container used to centre the items on the page, margin set to 
+auto and width set to 85%.*/
+
+.pageContainer {
+  margin: auto;
+  width: 85%;
+  display: block;
+}
+
+/*GLOBAL STYLES*/
+
+/*Links on hover are set to orange.*/
+.card-text>a:hover {
+  color: #E55000;
+}
+
+/*The text on all cards set to a soft black colour.*/
+.card-text>a {
+  color: rgb(38, 38, 38);
+}
+
+/*title on all cards apart from the small, set to align left. 
+A Google font was used as it was the closest I could find to Sainsbury's as their 
+font is produced by them. Font-weight set to bold. Font size se to 32px to match the original page.*/
+
+.card-title>h3 {
+  text-align: left;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: rgb(64, 64, 64);
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 12px;
+  margin-bottom: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 32px;
+
+}
+
+/*HEADER*/
+
+/*Refers to the section of the header with the white background. */
+
+.headerContainerInner {
+  padding: 0px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+
+}
+
+/*Menu at the top of the page. Background colour set to off white. Set to dispaly flex. */
+.topMenu {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 8px;
+  background-color: #f2f2f2;
+  min-width: 334px;
+}
+
+/*Container contain the SVG icons in the top menu. Display set to flex and padding given 
+left and right to match the original site.*/
+
+.topSvg {
+  display: flex;
+  padding-left: 50px;
+  padding-right: 150px;
+}
+
+/*SVGs given a padding right to separate them from their neighbouring text.*/
+
+.topSvg>div>a>svg {
+  padding-right: 6px;
+}
+
+/*SVGs and text within the top menu - soft brown colour, font size set to 14px, text decoration 
+set to none and font family chosen to match the original site.*/
+
+.topSvg>div>a {
+  color: rgb(64, 64, 64);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+
+/*Links in top menu set to orange on hover. */
+.topSvg>div>a:hover {
+  color: #E55000;
+}
+
+/*Sets the width and height of the SVG on the top menu.  */
+
+.topSvg>div>a>svg {
+  width: 20px;
+  height: 20px;
+}
+
+/*HEADER SEARCH
+
+Styling for the search and select box in the header.*/
+
+/*The container containing the elements given a max-width and margin set 
+to center container.*/
+.searchBar {
+  position: relative;
+  display: block;
+  margin: 0px auto 16px;
+  max-width: 847px;
+  padding: 0px 16px;
+}
+
+/*Select box made bigger to match the original site.*/
+
+select {
+  height: 46px;
+  width: 120px;
+}
+
+/*The text within the select element set to black. Appearance set to none
+to hide the dropdown navigation. Padding given to centre text. Font-weight set
+to bold to match the original site.*/
+
+select.category {
+  color: black;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 35px 5px 10px;
+  position: relative;
+  text-align: center;
+  text-align-last: center;
+  font-weight: 700;
+  height: 100%;
+}
+
+/*Border given to the select box to match the original. */
+
+.selectBox {
+  position: relative;
+  height: 48px;
+  border-top: 1px solid rgb(115, 115, 115);
+  border-bottom: 1px solid rgb(115, 115, 115);
+  border-left: 1px solid rgb(115, 115, 115);
+  border-image: initial;
+  border-right: none;
+}
+
+/*Styling for the dropdown icon in the select box. Recreated using a 
+border and transform style - copied from the original site.*/
+
+div.selectBox::after {
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+  content: "";
+  display: block;
+  height: 8px;
+  margin-top: -6px;
+  pointer-events: none;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+/*Form style used to centre the input items within the header.*/
+
+form {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+/*HEADER INPUT BOX*/
+
+/*input box given a grey border and height and width set to match the original.*/
+
+.searchBox {
+  position: relative;
+  height: 48px;
+  width: 100%;
+  border-top: 1px solid rgb(115, 115, 115);
+  border-bottom: 1px solid rgb(115, 115, 115);
+  border-left: 1px solid rgb(115, 115, 115);
+  border-image: initial;
+  border-right: none;
+}
+
+
+
+.full {
+  display: none;
+}
+
+/*Styling for the text within the input box. Padding given to take the placeholder text away from the 
+sides. Font-family/font-style matches the original. */
+
+.searchInput {
+  border: 0px;
+  border-radius: 0px;
+  padding: 8px;
+  width: 100%;
+  position: relative;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 100%;
+  font-style: italic;
+}
+
+/*Button background orange with white text
+font weight set to 800.*/
+
+button {
+  background-color: rgb(240, 108, 0);
+  border: 0px;
+  font-weight: 800;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 48px;
+  line-height: 0;
+  min-width: 60px;
+  width: 100px;
+  color: rgb(255, 255, 255);
+}
+
+
+/*LOGO HEADER*/
+
+/*styling for the logos in the header, the container 
+set to flex - aligned centre and items given 
+a 1em column gap.
+
+Each logo has a width that is similar to the original 
+websites. */
+
+.headerLogos {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  column-gap: 1em;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sainsburys {
+  max-width: 115px;
+  width: 100%;
+  margin: 8px;
+}
+
+.argos {
+  margin: 8px;
+  width: 48px;
+
+}
+
+.tu {
+  max-width: 35px;
+  width: 100%;
+  margin: 8px;
+}
+
+.habitat {
+  max-width: 100px;
+  margin: 8px;
+  width: 100%;
+}
+
+.nectar {
+  margin: 8px;
+  max-width: 50px;
+  width: 100%;
+
+
+}
+
+/*Nav Menu*/
+
+/*styling for the navigation menu. margin set to auto 
+to centre item. */
+
+.navBar {
+  margin: auto;
+}
+
+/*Menu list set to display flex. Given a scroll overflow as it appears on 
+the original site. white-space set to nowrap to stop words from wrapping and 
+list-style set to none.*/
+
+.navList {
+  display: flex;
+  overflow: scroll;
+  white-space: nowrap;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/*Nav bar text items set to a soft black colour. Font family and font-weight 
+set to the same as the other headers. Font-size set to 21px. Text-decoration set
+to none. */
+
+.navList>li>a {
+  color: rgb(64, 64, 64);
+  cursor: pointer;
+  display: block;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  position: relative;
+  padding: 11px 16px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*Nav list items set to display orange on hover*/
+
+.navList>li>a:hover {
+  color: #E55000;
+}
+
+/*Global styling for the different sections. Sections set to margin auto to 
+align items center.*/
+
+section {
+  display: block;
+  margin: auto;
+}
+
+/*Styling for every section heading. Colour set to soft black. Font family set
+to a Google Fonts, which was the closet I could find. Font size set to 40px. Margin
+given top and bottom to create distance from other items. */
+
+.sectionHeading>h2 {
+  text-align: left;
+  color: rgb(48, 47, 47);
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  margin-left: 4px;
+  letter-spacing: 1px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 900;
+}
+
+/*Images on the card given a width of 100% and an auto height.
+border radius set to 0px to match original site.*/
+
+img.card-img-top {
+  border-radius: 0px;
+  width: 100%;
+  height: auto;
+}
+
+/*card bodies all given the same padding.*/
+
+div.card-body {
+  padding: 5px 5px 5px 5px;
+}
+
+/*border set to none and border given a slight radius. A minimum
+width of 100%.*/
+
+div.card {
+  border: none;
+  border-radius: 2px;
+  min-width: 100%;
+}
+
+/*SECTION ONE*/
+
+/*Styling for the first row of images. Set to display flex. Slight margin given.*/
+
+.imageRow1 {
+  display: flex;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
+/*Styling for small image card containers. Given set width and height to match the original 
+website.*/
+
+.smallImageBox {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  display: flex;
+  background-color: white;
+  align-content: flex-start;
+  width: 342px;
+  height: 274px;
+}
+
+/*Styling for the title on the small cards. Same font family and colour 
+as the other headings. */
+
+div.card-title.h5 {
+  margin: 0px;
+  white-space: normal;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 800;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: rgb(38, 38, 38);
+}
+
+
+
+/*SECTION TWO*/
+
+
+/*As this section contains four cards, a grid is used to display two rows.*/
+
+.imageRow2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*Styling for large image card containers. Given set width and height to match the original 
+website.*/
+
+.largeImageBox {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  width: 100%;
+  background-color: white;
+}
+
+/*Text on the large cards set to align left with a slight left margin.*/
+
+.cardTextLarge {
+  text-align: left;
+  margin-left: 12px;
+}
+
+/*Links on the large cards set to align left with a slight left margin.*/
+
+.linkLarge {
+  text-align: left;
+  margin-left: 12px;
+}
+
+/*Height set to 194px for the body of the large cards - fits the text in.*/
+
+div.cardLargeBody.card-body {
+  height: 210px;
+}
+
+/*SECTION THREE*/
+
+/*Styling for the third row of images. Set to display flex and width set to 100%
+and height auto.*/
+
+.imageRow3 {
+  display: flex;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*Styling for medium image card containers. Given set width to match the original 
+website.*/
+
+.mediumImageBox {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background-color: white;
+  width: 451px;
+  padding-bottom: 10px;
+}
+
+/*Text on the large cards set to align left with a slight left margin. Font size set
+to 16x.*/
+
+.cardTextMedium {
+  text-align: left;
+  margin-left: 12px;
+  font-size: 16px;
+}
+
+/*links on the large cards set to align left with a slight left margin. Font size set
+to 16x.*/
+
+.linkMedium {
+  text-align: left;
+  margin-left: 12px;
+  font-size: 16px;
+}
+
+/*SECTION 4 STYLING
+
+Last row of cards. Set to grid display.*/
+
+.imageRow4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*APP BOX
+
+Styling for the app link container at the bottom of the main page.
+App container given a white background. */
+
+.appContainer {
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid rgb(216, 216, 216);
+  border-bottom: 1px solid rgb(216, 216, 216);
+  margin-top: 24px;
+}
+
+/*Container set to display flex, justified to the centre, 
+margin set to auto to align and width set to 70%.*/
+
+.appContainerHolder {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+/*Styling for the headings in the app container. 
+colour set to a shade of black, font-weight and family set
+the same as the other headings. Font size set to 22px.*/
+
+.appName {
+  text-align: center;
+  color: rgb(64, 64, 64);
+  font-size: 22px;
+  line-height: 1.2;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 800;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/*Both app containers given the same styling - min width, centred text, slight padding.*/
+
+/*Sainsbury's apps*/
+
+.appInnerContainer1 {
+  min-width: 150px;
+  padding: 24px 16px;
+  text-align: center;
+  flex-basis: 100%;
+}
+
+/*Argos apps*/
+
+.appInnerContainer2 {
+  min-width: 150px;
+  padding: 24px 16px;
+  text-align: center;
+  flex-basis: 100%;
+}
+
+/*Styling for the playstore/appstore images.
+Same styling apart from width - Google logo is slightly 
+larger/ */
+
+.appleAppBadge {
+  width: 119px;
+  height: 38px;
+  max-width: 100%;
+  margin-right: 5px;
+  margin-bottom: 15px;
+}
+
+.googleAppBadge {
+  width: 130px;
+  height: 38px;
+  max-width: 100%;
+  margin-bottom: 15px;
+
+}
+
+/*FOOTER
+
+Styling for the footer.*/
+
+/*Background soft black. Slight padding top and bottom
+text set to white.*/
+
+footer {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: rgb(38, 38, 38);
+  color: white;
+  display: block;
+}
+
+/*Styling for container that contains the main list items.
+Set to grid display with 4 columns, and a width of 85%.*/
+
+.footerListContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 85%;
+  margin: auto;
+  column-gap: 4em;
+}
+
+/*Each list block given bottom and left padding 
+of 24px.*/
+
+.footerListContainer>div {
+  padding: 0px 0px 24px 24px;
+}
+
+/*Footer lists - Text aligned left, padding - left removed, bullet
+points removed and font size set to 17px.*/
+
+.footerListContainer>div>ul {
+  text-align: left;
+  padding-left: 0px;
+  list-style: none;
+  font-size: 17px;
+}
+
+/*Padding given to each list item.*/
+.footerListContainer>div>ul>li {
+  padding: 8px 16px 10px 0px;
+
+}
+
+/*List items set to white, text decoration removed*/
+
+.footerListContainer>div>ul>li>a {
+  color: white;
+  text-decoration: none;
+}
+
+/*Headings for the footer lists, given the same styling as 
+other headings. Font size set to 18px. Bottom margin given 
+to give distance from the list.*/
+
+.footerHeadings {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+/*Styling for the h4 heading in the first list. Styling set to 
+match the other headings. */
+
+.h4-list {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 800;
+  text-align: left;
+  font-size: 18px;
+}
+
+/*LEGAL LINKS FOOTER
+
+Styling for the list of links. 
+set to display inline, slight margin and padding given. Font size
+set to 16px and font family used is same on original site. */
+
+.legal-ul>li {
+  display: inline-block;
+  margin: 0px 0px 0.725rem;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.legal-ul>li>a {
+  color: white;
+  text-decoration: none;
+}
+
+/*COPYRIGHT INFO*/
+.copyright>p {
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+/*SOCIAL LINKS FOOTER
+
+Styling for social SVG icons in the footer. 
+Set to display flex and centred. Given a slight
+column gap and padding botom. */
+
+.footerSvgContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 1em;
+  padding-bottom: 50px;
+}
+
+/*Used to create a rounded border for the SVG social 
+icons. Set to soft black colour and transform used 
+to create a circle. */
+
+.footerSvgContainer>a {
+  display: inline-block;
+  line-height: 0;
+  margin: 0px 3px;
+  background-color: rgb(64, 64, 64);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transform: scale(0.9);
+  padding-top: 7px;
+}
+
+/*Link colour to original site.*/
+.website {
+  color: #E55000;
+}
+
+/*At a max-width of 479px, the List in the footer is set to 
+display a block, padding is removed from search bar and 
+the SVG logos in the header are displayed as a grid. */
+
+@media screen and (max-width: 479px) {
+  .footerListContainer {
+    display: block;
+  }
+
+  .searchBar {
+    padding: 0px;
+  }
+
+  .headerLogos {
+    display: grid;
+    grid-template-columns: repeat(5, 0.4fr);
+    column-gap: 1em;
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  /*First row of images set to grid display.*/
+
+  .imageRow1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /*Page container made full width and
+  overflow changed to scroll to replicate 
+  the original site.*/
+
+  .pageContainer {
+    width: 100%;
+    padding-left: 50px;
+    overflow: scroll;
+  }
+
+  /*Large image cards styled to display 
+ full image, similar to the original site.*/
+
+  div.largeCard.card {
+    height: auto;
+    margin-right: 100px;
+    width: 380px;
+  }
+
+  /*Body of large image cards reduced. */
+
+  div.cardLargeBody.card-body {
+    height: 220px;
+  }
+
+  /*Medium image cards width and height set
+ to match the large cards padding removed from
+ bottom of card container. */
+
+  div.mediumCard.card {
+    height: 0px;
+    margin-right: 100px;
+    width: 380px;
+    height: 470px;
+    padding-bottom: 20px;
+  }
+
+
+  .mediumImageBox {
+    padding-bottom: 0px;
+  }
+
+  /*Padding removed from the top menu SVG icons to 
+  prevent logos from */
+
+  .topSvg {
+    padding: 0px;
+  }
+
+  /*Box shadow added to all the cards as per the original site
+  design.*/
+
+  .card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+
+/*First row of small images set to display block.*/
+
+@media screen and (max-width:200px) {
+  .imageRow1 {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 955px) {
+
+  /*Main footer lists changed to a two-column layout*/
+
+  .footerListContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/*All the card rows given a column gap at a min
+width of 200px. */
+
+@media screen and (min-width:200px) {
+
+  .imageRow1 {
+    column-gap: 1em;
+  }
+
+  .imageRow2 {
+    column-gap: 1em;
+  }
+
+  .imageRow3 {
+    column-gap: 1em;
+  }
+
+  .imageRow4 {
+    column-gap: 1em;
+  }
+}
+
+@media screen and (min-width:576px) {
+
+  /*Flex basis for both the app containers at the 
+  bottom of the main page set to 50%.*/
+
+  .appInnerContainer1 {
+    flex-basis: 50%;
+  }
+
+  .appInnerContainer2 {
+    flex-basis: 50%;
+  }
+
+  @media screen and (min-width: 767px) {
+
+    /*Displays the search icon in the button next to the 
+  input box.*/
+
+    .searchIcon {
+      display: contents;
+    }
+  }
+
+
+
+  /*Border right added to the first bottom-of-main-page
+ app container - acts as a divider between the two containers.*/
+
+  .appInnerContainer1:first-child {
+    border-bottom: none;
+    border-right: 1px solid rgb(216, 216, 216);
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  /*Top menu with SVG icons set to flex-end. */
+  .topMenu {
+    justify-content: flex-end;
+  }
+
+  /*Nav menu set centre and overflow set as auto.*/
+
+  .navList {
+    justify-content: center;
+    overflow: auto;
+  }
+
+  /*Shows the search text on the button next to the input box.*/
+
+  .full {
+    display: contents;
+  }
+
+}
+
+@media screen and (min-width:577px) and (max-width:1100px) {
+  div.largeCard.card {
+    height: 552px;
+  }
 }
