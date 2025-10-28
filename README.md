@@ -4,7 +4,7 @@ A React-based front-end project inspired by the Sainsbury’s website, recreatin
 
 ## Demo
 
-![Sainsbury UI Clone Screenshot](link-to-your-screenshot)
+<img src="screenshots/clone-screenshot1.png" width="400" height="400" /> <img src="screenshots/clone-screenshot2.png" width="400" height="400" />
 
 ## Features
 
