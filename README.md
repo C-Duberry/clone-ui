@@ -1,6 +1,6 @@
 # Sainsbury’s UI Clone
 
-A React-based front-end project inspired by the Sainsbury’s website, recreating the site’s layout and visual style using React Bootstrap for responsive design.
+A React-based front-end project inspired by the Sainsbury’s website homepage, recreating the site’s layout and visual style using React Bootstrap for responsive design.
 
 ## Demo
 
@@ -8,7 +8,7 @@ A React-based front-end project inspired by the Sainsbury’s website, recreatin
 
 ## Features
 
-- React-based UI clone of the Sainsbury’s website
+- React-based UI clone of the Sainsbury’s website homepage
 - Layout and visual design implemented with React Bootstrap
 - Fully responsive across devices
 - Clean and minimal interface
