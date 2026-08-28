@@ -2,7 +2,7 @@
 
 A React-based front-end project inspired by the Sainsbury’s website homepage, recreating the site’s layout and visual style using React Bootstrap for responsive design.
 
-## Demo
+## Screenshots
 
 <img src="screenshots/clone-screenshot1.png" width="400" height="400" /> <img src="screenshots/clone-screenshot2.png" width="400" height="400" />
 
